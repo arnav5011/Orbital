@@ -9,12 +9,8 @@ def get_quantum_numbers():
     while True:
         try:
             n = int(input("Enter Principal Quantum Number (n): "))
-            if n > 7:
-                raise ValueError("Principal Quantum Number (n) must be 7 or less.")
-
+            
             l = int(input("Enter Angular Momentum Quantum Number (l): "))
-            if l > 5:
-                raise ValueError("Angular Momentum Quantum Number (l) must be 4 or less.")
             if l >= n:
                 raise ValueError("Angular Momentum Quantum Number (l) must be less than Principal Quantum Number (n).")
 
@@ -158,8 +154,10 @@ def get_orbital_name(n,l):
         orbit += "p"
     elif l == 2:
         orbit += "d"
-    else:
+    elif l==3:
         orbit += "f"
+    else:
+        orbit += " unnamed as does not exist"
     return orbit
     
 def main():
