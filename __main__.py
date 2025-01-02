@@ -135,7 +135,6 @@ def plot_harmonics(theta_array, phi_array, harmonics_array, l, m):
     scatter = ax.scatter(x_array, y_array, z_array, c=magnitude, cmap=cm.viridis, s=5, alpha=0.7)
     ax_slider = plt.axes([0.25, 0.01, 0.65, 0.03], facecolor='lightgoldenrodyellow')
     
-    slider_z = Slider(ax_slider, 'Z Stretch', 1, 5, valinit=1, valstep=0.1)
 
     # Set plot title and labels
     ax.set_title(f'Harmonics: l={l}, m={m}', fontsize=15)
